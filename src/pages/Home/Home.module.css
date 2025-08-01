@@ -1,0 +1,31 @@
+.container {
+    width: 1184px;
+height: 48px;
+}
+
+.header {
+display: flex;
+justify-content: space-between;
+padding: 20px 128px;
+align-items: center;
+}
+
+.learn {
+    display: flex;
+    gap: 2px;
+}
+
+.learnSvg {
+    width: 28px;
+    height: 28px;
+}
+
+.home {
+    display: flex;
+    gap: 28px;
+}
+
+.login {
+     display: flex;
+    gap: 14px;
+}
