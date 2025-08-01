@@ -10,15 +10,15 @@ export default function Home() {
                          <svg className={css.learnSvg} >
                       <use href=''></use>
                     </svg>
-                        <p>LearnLingo</p>
+                        <p className={css.learnLingo}>LearnLingo</p>
                    </div>
                     <div className={css.home}>
-                        <p>Home</p>
-                        <p>Teachers</p>
+                        <p className={css.homeText}>Home</p>
+                        <p className={css.homeText}>Teachers</p>
                     </div>
                    <div className={css.login}>
-                        <p>Log in</p>
-                        <button>Registration</button>
+                        <p className={css.loginText}>Log in</p>
+                        <button className={css.button}>Registration</button>
                    </div>
                 </div>
                 <div className={css.description}>
