@@ -1,7 +1,4 @@
-.container {
-    width: 1184px;
-height: 48px;
-}
+
 
 .header {
 display: flex;
@@ -12,10 +9,10 @@ align-items: center;
 
 .learn {
     display: flex;
-    gap: 2px;
+    gap: 8px;
 }
 
-.learnSvg {
+svg {
     width: 28px;
     height: 28px;
 }
@@ -34,14 +31,17 @@ line-height: 1.25;
 }
 
 .home {
-    display: flex;
-    gap: 28px;
+display: flex;
+gap: 28px;
 }
 
 .login {
-     display: flex;
-    gap: 14px;
-    align-items: center;
+display: flex;
+align-items: center;
+}
+
+.iconLogin {
+    margin-right: 8px;
 }
 
 .loginText {
@@ -49,10 +49,11 @@ font-weight: 700;
 font-size: 16px;
 line-height: 1.25;
 color: #8a8a89;
+margin-right: 14px;
 }
 
 .button {
-    border-radius: 12px;
+border-radius: 12px;
 padding: 14px 39px;
 width: 166px;
 height: 48px;
@@ -62,4 +63,95 @@ font-weight: 700;
 font-size: 16px;
 line-height: 1.25;
 color: #fff;
+}
+
+.mainText {
+display: flex;
+gap: 24px;
+margin-bottom: 24px;
+}
+
+.headerContainer {
+margin-left: 64px;
+margin-bottom: 24px;
+border-radius: 30px;
+width: 720px;
+background: #f8f8f8;
+}
+
+.description {
+padding: 98px 108px 98px 64px;
+
+}
+
+.headerText {
+font-weight: 500;
+font-size: 48px;
+line-height: 1.17;
+letter-spacing: -0.02em;
+margin-bottom: 32px;
+
+}
+
+.highlight {
+font-style: italic;
+font-weight: 400;
+background-color: #8A8A89;
+}
+
+.text {
+font-size: 16px;
+line-height: 1.37;
+letter-spacing: -0.02em;
+margin-bottom: 64px;
+}
+
+.getStarted {
+border-radius: 12px;
+width: 267px;
+height: 60px;
+border: none;
+font-weight: 700;
+line-height: 1.56;
+background: #8a8a89;
+font-size: 18px;
+}
+
+.statistic {
+    border: 1.50px dashed #8a8a89;
+    border-radius: 30px;
+    margin-left: 64px;
+    height: 116px;
+    width: 1312px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 123px;
+    padding-right: 123px;
+}
+
+.statisticContainer {
+   
+}
+
+.statisticText {
+    display: flex;
+    width: 217px;
+    height: 36px;
+    align-items: center;
+    gap: 16px;
+}
+
+.statisticData {
+font-weight: 500;
+font-size: 28px;
+line-height: 1.14;
+letter-spacing: -0.02em;
+}
+
+.statisticDescr {
+font-size: 14px;
+line-height: 1.29;
+letter-spacing: -0.02em;
+color: rgba(18, 20, 23, 0.7);
 }
