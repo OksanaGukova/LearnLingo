@@ -1,6 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
-    <symbol id="icon-log-in-01" viewBox="0 0 32 32">
+    <symbol id="icon-log-in-01Active" viewBox="0 0 32 32">
+<path fill="none" stroke="#f4c550" style="stroke: var(--color1, #f4c550)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M20 4h1.6c2.24 0 3.36 0 4.216 0.436 0.753 0.383 1.364 0.995 1.748 1.748 0.436 0.856 0.436 1.976 0.436 4.216v11.2c0 2.24 0 3.36-0.436 4.216-0.384 0.753-0.995 1.364-1.748 1.748-0.856 0.436-1.976 0.436-4.216 0.436h-1.6"></path>
+<path fill="none" stroke="#f4c550" style="stroke: var(--color1, #f4c550)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M13.333 9.333l6.667 6.667M20 16l-6.667 6.667M20 16h-16"></path>
+</symbol>
+    <symbol id="icon-ukraineActive" viewBox="0 0 32 32">
+<path fill="#ffda44" style="fill: var(--color2, #ffda44)" d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+<path fill="#338af3" style="fill: var(--color3, #338af3)" d="M0 16c0-8.836 7.163-16 16-16s16 7.163 16 16z"></path>
+</symbol>
+      <symbol id="icon-log-in-01" viewBox="0 0 32 32">
       <path fill="none" stroke="#8a8a89" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2" d="M20 4h1.6c2.24 0 3.36 0 4.216.436a3.996 3.996 0 0 1 1.748 1.748C28 7.04 28 8.16 28 10.4v11.2c0 2.24 0 3.36-.436 4.216a4.001 4.001 0 0 1-1.748 1.748C24.96 28 23.84 28 21.6 28H20M13.333 9.333 20 16m0 0-6.667 6.667M20 16H4" style="stroke:var(--color1, #8a8a89)"/>
     </symbol>
     <symbol id="icon-ukraine" viewBox="0 0 32 32">

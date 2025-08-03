@@ -1,29 +1,13 @@
+
 import css from './Home.module.css'
+import Header from '../../components/Header/Header'
 /* import sprite from '../../../public/svg/icons.svg' */
 
 export default function Home() {
     
     return (
         <div>        
-                <div className={css.header}>
-                   <div className={css.learn}>
-                         <svg className={css.learnSvg} >
-                      <use href="/svg/icons.svg#icon-ukraine"></use>
-                    </svg>
-                        <p className={css.learnLingo}>LearnLingo</p>
-                   </div>
-                    <div className={css.home}>
-                        <p className={css.homeText}>Home</p>
-                        <p className={css.homeText}>Teachers</p>
-                    </div>
-                   <div className={css.login}>
-                     <svg className={css.iconLogin} >
-                      <use href="/svg/icons.svg#icon-log-in-01"></use>
-                    </svg>
-                        <p className={css.loginText}>Log in</p>
-                        <button className={css.button}>Registration</button>
-                   </div>
-                </div>
+            <Header/>
                <div className={css.mainText}>
                    <div className={css.headerContainer}>
                         <div className={css.description}>
@@ -37,7 +21,6 @@ export default function Home() {
                     </div>
                </div>
                 <div className={css.statistic}>
-              {/*      <div className={css.statisticContainer}> */}
                         <div className={css.statisticText}>
                             <p className={css.statisticData}>32,000+</p>
                             <p className={css.statisticDescr}>Experienced tutors</p>
@@ -56,6 +39,6 @@ export default function Home() {
                         </div>
                    </div>
                 </div>
- /*            </div> */
+
     )
 }
