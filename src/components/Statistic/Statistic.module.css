@@ -1,0 +1,35 @@
+.statistic {
+    border: 1.50px dashed #8a8a89;
+    border-radius: 30px;
+    margin-left: 64px;
+    height: 116px;
+    width: 1312px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 123px;
+    padding-right: 123px;
+}
+
+
+.statisticText {
+    display: flex;
+    width: 217px;
+    height: 36px;
+    align-items: center;
+    gap: 16px;
+}
+
+.statisticData {
+font-weight: 500;
+font-size: 28px;
+line-height: 1.14;
+letter-spacing: -0.02em;
+}
+
+.statisticDescr {
+font-size: 14px;
+line-height: 1.29;
+letter-spacing: -0.02em;
+color: rgba(18, 20, 23, 0.7);
+}

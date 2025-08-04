@@ -1,0 +1,59 @@
+.wordYellow {
+background-color: #F4C550;
+}
+
+.btnYellow {
+background-color: #F4C550;
+}
+
+.borderYellow {
+    border:  1.50px dashed #F4C550;
+}
+
+.wordGreen {
+background-color: #9FBAAE;
+}
+
+.btnGreen {
+    background-color: #9FBAAE;
+}
+
+.borderGreen {
+    border:  1.50px dashed #9FBAAE;
+}
+
+.wordBlue {
+background-color: #9FB7CE;
+}
+
+.btnBlue {
+    background-color: #9FB7CE;
+}
+
+.borderBlue {
+    border:  1.50px dashed #9FB7CE;
+}
+
+.wordRed {
+ background-color: #E0A39A;
+}
+
+.btnRed {
+    background-color: #E0A39A;
+}
+
+.borderRed {
+    border:  1.50px dashed #E0A39A;
+}
+
+.wordOrange {
+background-color: #F0AA8D;
+}
+
+.btnOrange {
+    background-color: #F0AA8D;
+}
+
+.borderOrange {
+    border:  1.50px dashed #F0AA8D;
+}
