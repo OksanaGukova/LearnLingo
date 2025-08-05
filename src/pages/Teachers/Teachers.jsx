@@ -13,7 +13,7 @@ export default function Teachers () {
         title={css.wordYellow} 
         buttonActive={css.btnYellow} 
         img={img1} 
-        border={css.borderYellow}
+        border={css.borderOrange}
       />
       <TeacherCard 
         title={css.wordGreen} 
