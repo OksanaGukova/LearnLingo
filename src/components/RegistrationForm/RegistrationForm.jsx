@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { registerUser } from '../../redux/auth/operations';
 
 
+
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Username is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -32,11 +33,10 @@ export default function RegistrationForm () {
     >
       {({ isSubmitting }) => (
         <Form className={css.registerForm} autoComplete="off">
-            <h1>Registration</h1>
-            <p>Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information</p>
+            <h1 className={css.header}>Registration</h1>
+            <p className={css.text}>Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information</p>
           <label className={css.registerLabel}>
-            Name
-            <Field type="text" name="name" className={css.registerInput} />
+            <Field type="text" name="name" className={css.registerInput} placeholder="Name"/>
             <ErrorMessage
               name="name"
               component="div"
@@ -44,8 +44,7 @@ export default function RegistrationForm () {
             />
           </label>
           <label className={css.registerLabel}>
-            Email
-            <Field type="email" name="email" className={css.registerInput} />
+            <Field type="email" name="email" className={css.registerInput} placeholder="Email"/>
             <ErrorMessage
               name="email"
               component="div"
@@ -53,11 +52,11 @@ export default function RegistrationForm () {
             />
           </label>
           <label className={css.registerLabel}>
-            Password
             <Field
               type="password"
               name="password"
               className={css.registerInput}
+              placeholder ='Password' 
             />
             <ErrorMessage
               name="password"

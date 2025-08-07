@@ -14,30 +14,35 @@ export default function Teachers () {
         buttonActive={css.btnYellow} 
         img={img1} 
         border={css.borderOrange}
+  loginIcon='icon-log-in-01'
       />
       <TeacherCard 
         title={css.wordGreen} 
         buttonActive={css.btnGreen} 
         img={img2} 
         border={css.borderGreen}
+        loginIcon='icon-log-in-01'
       />
       <TeacherCard 
         title={css.wordBlue} 
         buttonActive={css.btnBlue} 
         img={img3} 
         border={css.borderBlue}
+        loginIcon='icon-log-in-01'
       />
       <TeacherCard 
         title={css.wordRed} 
         buttonActive={css.btnRed} 
         img={img4} 
         border={css.borderRed}
+        loginIcon='icon-log-in-01'
       />
       <TeacherCard 
         title={css.wordOrange} 
         buttonActive={css.btnOrange} 
         img={img5} 
         border={css.borderOrange}
+        loginIcon='icon-log-in-01'
       />
     </div>
   )
