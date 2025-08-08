@@ -24,19 +24,21 @@ export default function LoginForm () {
              <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       {({ isSubmitting }) => (
         <Form className={css.loginForm} autoComplete="off">
-            <h1>Log In</h1>
-            <p>Welcome back! Please enter your credentials to access your account and continue your search for an teacher.</p>
-          <label>
-            Email
-            <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" />
-          </label>
-          <label>
-            Password
-            <Field type="password" name="password" />
-            <ErrorMessage name="password" component="div" />
-          </label>
-          <button type="submit" disabled={isSubmitting}>
+          <div className={css.loginContainer}>
+              <h1 className={css.loginHeader}>Log In</h1>
+              <p className={css.loginText}>Welcome back! Please enter your credentials to access your account and continue your search for an teacher.</p>
+          </div>
+          <div className={css.loginLabel}>
+            <label>
+              <Field type="email" name="email" placeholder="Email" className={css.loginInput}/>
+              <ErrorMessage name="email" component="div" />
+            </label>
+            <label>
+              <Field type="password" name="password" placeholder="Password" className={css.loginInput}/>
+              <ErrorMessage name="password" component="div" />
+            </label>
+          </div>
+          <button type="submit" disabled={isSubmitting} className={css.loginButton}>
             Log In
           </button>
         </Form>

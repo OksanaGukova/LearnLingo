@@ -14,8 +14,21 @@
 /* Контейнер модального вікна */
 .modalContent {
   background-color: #fff;
-  padding: 40px;
-  border-radius: 20px;
+  padding: 64px;
+  border-radius: 30px;
+width: 565px;
+height: 599px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   z-index: 1001;
+   position: relative; 
+}
+
+.closeBtn {
+ position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  background: transparent; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 24px; 
 }

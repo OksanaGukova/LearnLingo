@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-
-axios.defaults.baseURL = "https://identitytoolkit.googleapis.com/v1";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { get, getDatabase, ref, set } from "firebase/database";
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAp3MvHV75anLVmFpdEbv3EHO4cQn7fFFM",
@@ -13,78 +13,81 @@ const firebaseConfig = {
   measurementId: "G-9CZSH008YN"
 };
 
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+export const db = getDatabase(app);
 
-export const setAuthHeader = (token) => {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
-
-export const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = "";
-};
 
 export const registerUser = createAsyncThunk(
   "auth/register",
-  async (credentials, thunkAPI) => {
+  async ({ name, user }, thunkAPI) => {
     try {
-      const res = await axios.post(`/accounts:signUp?key=${firebaseConfig.apiKey}`, {
-        email: credentials.email,
-        password: credentials.password,
-        returnSecureToken: true,
+      await set(ref(db, `users/${user.uid}`), {
+        name,
+        email: user.email,
+        createdAt: new Date().toISOString(),
       });
-      setAuthHeader(res.data.idToken);
-      return res.data;
+
+      const userRef = ref(db, `users/${user.uid}`);
+      const snapshot = await get(userRef);
+      const userData = snapshot.val();
+      return userData;
+      
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
+      
     }
+    
   }
+  
 );
 
 
 export const loginUser = createAsyncThunk(
   "auth/login",
-  async (credentials, thunkAPI) => {
+  async ({ user }, thunkAPI) => {
     try {
-      const res = await axios.post(`/accounts:signInWithPassword?key=${firebaseConfig.apiKey}`, {
-        email: credentials.email,
-        password: credentials.password,
-        returnSecureToken: true,
-      });
-      setAuthHeader(res.data.idToken);
-      return res.data;
+      const userRef = ref(db, `users/${user.uid}`);
+      const snapshot = await get(userRef);
+      const userData = snapshot.val();
+
+      return userData;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
-
 
 export const refreshUser = createAsyncThunk(
   "auth/refresh",
   async (_, thunkAPI) => {
-    const state = thunkAPI.getState();
-    const persistedToken = state.auth.token;
-
-    if (!persistedToken) {
-      return thunkAPI.rejectWithValue("Unable to fetch user");
-    }
-    try {
-      const res = await axios.post(`/accounts:lookup?key=${firebaseConfig.apiKey}`, {
-        idToken: persistedToken,
+    return new Promise((resolve) => {
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          try {
+            const userRef = ref(db, `users/${user.uid}`);
+            const snapshot = await get(userRef);
+            const userData = snapshot.val();
+            resolve(userData);
+          } catch (error) {
+            resolve(thunkAPI.rejectWithValue(error.message));
+          }
+        } else {
+          resolve(null);
+        }
       });
-      return res.data.users[0];
+    });
+  }
+);
+
+export const logoutUser = createAsyncThunk(
+  "auth/logout",
+  async (_, { rejectWithValue }) => {
+    try {
+      await signOut(auth);
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
   }
 );
 
-export const logoutUser = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
-  try {
-    clearAuthHeader();
-    return true;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
-  }
-});
-
-export default axios;

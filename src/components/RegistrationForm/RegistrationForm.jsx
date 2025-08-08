@@ -33,37 +33,41 @@ export default function RegistrationForm () {
     >
       {({ isSubmitting }) => (
         <Form className={css.registerForm} autoComplete="off">
-            <h1 className={css.header}>Registration</h1>
-            <p className={css.text}>Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information</p>
-          <label className={css.registerLabel}>
-            <Field type="text" name="name" className={css.registerInput} placeholder="Name"/>
-            <ErrorMessage
-              name="name"
-              component="div"
-              className={css.registerError}
-            />
-          </label>
-          <label className={css.registerLabel}>
-            <Field type="email" name="email" className={css.registerInput} placeholder="Email"/>
-            <ErrorMessage
-              name="email"
-              component="div"
-              className={css.registerError}
-            />
-          </label>
-          <label className={css.registerLabel}>
-            <Field
-              type="password"
-              name="password"
-              className={css.registerInput}
-              placeholder ='Password' 
-            />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className={css.registerError}
-            />
-          </label>
+            <div className={css.regDecrciption}>
+              <h1 className={css.header}>Registration</h1>
+              <p className={css.text}>Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information</p>
+            </div>
+          <div className={css.labelContainer}>
+            <label className={css.registerLabel}>
+              <Field type="text" name="name" className={css.registerInput} placeholder="Name"/>
+              <ErrorMessage
+                name="name"
+                component="div"
+                className={css.registerError}
+              />
+            </label>
+            <label className={css.registerLabel}>
+              <Field type="email" name="email" className={css.registerInput} placeholder="Email"/>
+              <ErrorMessage
+                name="email"
+                component="div"
+                className={css.registerError}
+              />
+            </label>
+            <label className={css.registerLabel}>
+              <Field
+                type="password"
+                name="password"
+                className={css.registerInput}
+                placeholder ='Password' 
+              />
+              <ErrorMessage
+                name="password"
+                component="div"
+                className={css.registerError}
+              />
+            </label>
+          </div>
           <button
             type="submit"
             disabled={isSubmitting}

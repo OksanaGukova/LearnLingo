@@ -7,6 +7,7 @@ export default function UserMenu () {
      const dispatch = useDispatch();
   const { name } = useSelector(selectUser);
 
+
   return (
     <div className={css.container}>
       <p className={css.text}>Welcome, {name}</p>

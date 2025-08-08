@@ -4,6 +4,11 @@ width: 565px;
 height: 599px;
 }
 
+.regDecrciption {
+    width: 438px;
+margin-bottom: 40px;
+}
+
 .header {
 font-weight: 500;
 font-size: 40px;
@@ -16,7 +21,14 @@ margin-bottom: 20px;
 font-size: 16px;
 line-height: 1.37;
 color: rgba(18, 20, 23, 0.8);
-margin-bottom: 40px;
+
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 40px;
 }
 
 .registerInput {
