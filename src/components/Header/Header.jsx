@@ -4,6 +4,9 @@ import { NavLink } from 'react-router-dom'
 import LoginForm from '../LoginForm/LoginForm';
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
 import Modal from '../Modal/Modal';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import Favorite from '../../pages/Favorites/Favorites';
 
 
 
@@ -15,6 +18,7 @@ export default function Header ({
 
      const [isLoginOpen, setLoginOpen] = useState(false);
   const [isRegisterOpen, setRegisterOpen] = useState(false);
+   const isLoggedIn = useSelector(selectIsLoggedIn);
     return (
         <div>
               <div className={css.header}>
@@ -27,21 +31,25 @@ export default function Header ({
                     <div className={css.home}>
                         <NavLink className={css.homeText} to='/'>Home</NavLink>
                         <NavLink className={css.homeText} to='/teachers'>Teachers</NavLink>
+                        {isLoggedIn ? <NavLink className={css.homeText} to='/favorites'>Favorites</NavLink> : ''}
                     </div>
                     <div className={css.login}>
-          <div className={css.loginBox} onClick={() => setLoginOpen(true)}>
-            <svg className={css.iconLogin}>
-              <use href={`/svg/icons.svg#${loginIcon}`}></use>
-            </svg>
-            <p className={css.loginText}>Log in</p>
-          </div>
-
-          <button
-            className={`${css.button} ${activeClass || ""}`}
-            onClick={() => setRegisterOpen(true)}
-          >
-            Registration
-          </button>
+           {!isLoggedIn && ( // Додаємо умову для відображення кнопок входу та реєстрації
+                        <>
+                            <div className={css.loginBox} onClick={() => setLoginOpen(true)}>
+                                <svg className={css.iconLogin}>
+                                    <use href={`/svg/icons.svg#${loginIcon}`}></use>
+                                </svg>
+                                <p className={css.loginText}>Log in</p>
+                            </div>
+                            <button
+                                className={`${css.button} ${activeClass || ""}`}
+                                onClick={() => setRegisterOpen(true)}
+                            >
+                                Registration
+                            </button>
+                        </>
+                    )}
         </div>
       </div>
       {isLoginOpen && (

@@ -18,9 +18,10 @@ export default function RegistrationForm () {
     const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(registerUser(values));
-    actions.resetForm();
-  };
+  const { email, password } = values;
+  dispatch(registerUser({ email, password }));
+  actions.resetForm();
+};
     return (
          <Formik
       initialValues={{

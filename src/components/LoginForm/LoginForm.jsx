@@ -3,7 +3,7 @@ import css from './Loginform.module.css'
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../redux/auth/operations';
 
-export default function LoginForm () {
+export default function LoginForm ({onClose}) {
       const dispatch = useDispatch();
 
   const handleSubmit = (values, { setSubmitting }) => {
@@ -11,7 +11,9 @@ export default function LoginForm () {
       .unwrap()
       .then(() => {
         console.log("login success");
+         onClose();
       })
+      
       .catch(() => {
         console.log("login error");
       })

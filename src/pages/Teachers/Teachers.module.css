@@ -1,59 +1,59 @@
 .wordYellow {
-background-color: #F4C550;
+background-color: #F4C550 !important; 
 }
 
 .btnYellow {
-background-color: #F4C550;
+background-color: #F4C550 !important;
 }
 
 .borderYellow {
-    border:  1.50px dashed #F4C550;
+    border:  1.50px dashed #F4C550 !important;
 }
 
 .wordGreen {
-background-color: #9FBAAE;
+background-color: #9FBAAE !important;
 }
 
 .btnGreen {
-    background-color: #9FBAAE;
+    background-color: #9FBAAE !important;
 }
 
 .borderGreen {
-    border:  1.50px dashed #9FBAAE;
+    border:  1.50px dashed #9FBAAE !important;
 }
 
 .wordBlue {
-background-color: #9FB7CE;
+background-color: #9FB7CE !important;
 }
 
 .btnBlue {
-    background-color: #9FB7CE;
+    background-color: #9FB7CE !important;
 }
 
 .borderBlue {
-    border:  1.50px dashed #9FB7CE;
+    border:  1.50px dashed #9FB7CE !important;
 }
 
 .wordRed {
- background-color: #E0A39A;
+ background-color: #E0A39A !important;
 }
 
 .btnRed {
-    background-color: #E0A39A;
+    background-color: #E0A39A !important;
 }
 
 .borderRed {
-    border:  1.50px dashed #E0A39A;
+    border:  1.50px dashed #E0A39A !important;
 }
 
 .wordOrange {
-background-color: #F0AA8D;
+background-color: #F0AA8D !important;
 }
 
 .btnOrange {
-    background-color: #F0AA8D;
+    background-color: #F0AA8D !important;
 }
 
 .borderOrange {
-    border:  1.50px dashed #F0AA8D;
+    border:  1.50px dashed #F0AA8D !important;
 }

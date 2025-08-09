@@ -10,6 +10,7 @@ const RegistrationPage = lazy(() => import ('../../pages/RegistrationPage/Regist
 const LoginPage = lazy(() => import ('../../pages/LoginPage/LoginPage'));
 const Favorites = lazy(() => import ('../../pages/Favorites/Favorites'));
 const Teachers = lazy(() => import ('../../pages/Teachers/Teachers'));
+const AllTeachers = lazy(() => import ('../../pages/AllTeachers/AllTeachers'));
 const NotFoundPage = lazy(() => import ('../../pages/NotFoundPage/NotFoundPage'));
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
     <Layout>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/favorites" element={<Favorites />} />
       <Route path="/teachers" element={<Teachers />} />
+      <Route path="/allTeachers" element={<AllTeachers />} />
+      <Route path="/favorites" element={<Favorites />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
    </Layout>
