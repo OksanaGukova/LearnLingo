@@ -1,11 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import teachersData from '../../teachers.json'; // Adjust the path to your JSON file
+import teachersData from '../../teachers.json';
 
-// Create a slice of the state
 const teacherSlice = createSlice({
     name: 'teachers',
     initialState: {
-        items: teachersData, // Directly set the initial state with teachersData
+        items: teachersData,
         loading: false,
         error: null,
     },
@@ -16,8 +15,5 @@ const teacherSlice = createSlice({
     },
 });
 
-// Export actions and reducer
 export const { clearTeachers } = teacherSlice.actions;
-/* export default teacherSlice.reducer; */
-
 export const teacherReducer = teacherSlice.reducer;

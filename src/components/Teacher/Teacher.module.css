@@ -1,0 +1,63 @@
+svg {
+    width: 16px;
+    height: 16px;
+}
+
+.teacherCard {
+    display: flex;
+    gap: 48px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerList {
+    display: flex;
+     gap: 16px;
+}
+
+.headerListItem {
+    display: flex;
+      align-items: center;
+}
+
+.svgItem {
+    display: flex;
+    gap: 4px;
+}
+
+.headerListItem:not(:last-child) {
+    border-right: 1px solid rgba(18, 20, 23, 0.2);
+   padding-right: 16px;
+}
+
+.avatar {
+    border: 3px solid #fbe9ba;
+border-radius: 100px;
+width: 120px;
+height: 120px;
+display: flex; /* Використовуйте flexbox для центрування */
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
+}
+
+.avatarImg {
+    border-radius: 100px;
+width: 96px;
+height: 96px;
+}
+
+.languages {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: #8a8a89;
+}
+
+.headerText {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+}

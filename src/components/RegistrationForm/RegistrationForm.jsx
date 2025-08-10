@@ -17,11 +17,12 @@ const validationSchema = Yup.object().shape({
 export default function RegistrationForm () {
     const dispatch = useDispatch();
 
-  const handleSubmit = (values, actions) => {
-  const { email, password } = values;
-  dispatch(registerUser({ email, password }));
+const handleSubmit = (values, actions) => {
+   console.log(values);
+  dispatch(registerUser(values)); // <-- ВСІ поля!
   actions.resetForm();
 };
+
     return (
          <Formik
       initialValues={{
