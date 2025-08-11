@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import css from './Teacher.module.css';
 
 export default function Teacher({ teachers }) {
+      const [hiddenInfo, setHiddenInfo] = useState({});
+                // Function to toggle hidden info
+                const toggleHiddenInfo = (index) => {
+        setHiddenInfo((prev) => ({
+            ...prev,
+            [index]: !prev[index], // Toggle the visibility for the specific teacher
+        }));
+    };
     return (
         <div className={css.container}>
             {teachers.map((teacher, index) => (
@@ -38,13 +47,26 @@ export default function Teacher({ teachers }) {
                          
                         </div>
                         <div className={css.description}>
-                            <h1>{teacher.name} {teacher.surname}</h1>
-                            <p className={css.text}>Speaks: {teacher.languages.join(', ')}</p>
-                            <p className={css.text}>Lesson Info: {teacher.lesson_info}</p>
-                            <p className={css.text}>Conditions: {teacher.conditions.join(', ')}</p>
-                        </div>
-                        <div className={css.reviews}>
-                            <h3>Reviews:</h3>
+                            <h1 className={css.teacherName}>{teacher.name} {teacher.surname}</h1>
+                      
+                            <ul className={css.infoList}>
+                                  <li className={css.text}>Speaks: 
+                                    <span className={`${css.teacherInfo} ${css.underline}`}>{teacher.languages.join(', ')}
+                                    </span>
+                                    </li>
+                                    <li className={css.text}>Lesson Info: 
+                                        <span className={css.teacherInfo}>{teacher.lesson_info}
+                                            </span>
+                                            </li>
+                                    <li className={css.text}>Conditions:
+                                         <span className={css.teacherInfo}>{teacher.conditions.join(', ')}
+                                            </span>
+                                            </li>
+                            </ul>
+                             <div className={css.hidenInfo} style={{ display: hiddenInfo[index] ? 'block' : 'none' }}>
+                            <p className={css.experience}>{teacher.experience}</p>
+                               <div className={css.reviews}>
+                           
                             {teacher.reviews.length > 0 ? (
                                 teacher.reviews.map((review, reviewIndex) => (
                                     <div key={reviewIndex} className={css.review}>
@@ -53,24 +75,33 @@ export default function Teacher({ teachers }) {
         src={`../../../public/img/${reviewIndex % 2 === 0 ? 'woman' : 'man'}.png`} 
         alt={review.reviewer_name} 
       />
-                                            <p>{review.reviewer_name}</p>
-                                            <p>Rating: {review.reviewer_rating}</p>
+                                            <div>
+                                                <p className={css.reviewerName}>{review.reviewer_name}</p>
+                                                <p> {review.reviewer_rating}</p>
+                                            </div>
                                         </div>
-                                        <p>{review.comment}</p>
+                                        <p className={css.coment}>{review.comment}</p>
                                     </div>
                                 ))
                             ) : (
                                 <p>No reviews available.</p>
                             )}
+                           
                         </div>
-                        <ul>
+                       </div>
+                                        <p className={css.more} onClick={() => toggleHiddenInfo(index)} style={{ cursor: 'pointer' }}>
+                                {hiddenInfo[index] ? 'Read less' : 'Read more'}
+                            </p>
+                        </div>
+                     
+                        <ul className={css.levels}>
                             {teacher.levels.map((level, levelIndex) => (
                                 <li key={levelIndex}>
-                                    <button>{level}</button>
+                                    <button className={css.btnLevel}>{level}</button>
                                 </li>
                             ))}
                         </ul>
-                        <button>Book trial lesson</button>
+                     {!hiddenInfo[index] && <button className={css.book}>Book trial lesson</button>}
                     </div>
                 </div>
             ))}

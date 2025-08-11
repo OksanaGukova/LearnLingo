@@ -33,3 +33,7 @@ a:hover {
     display: block;
   }
 
+  button {
+    cursor: pointer;
+    border: none;
+  }

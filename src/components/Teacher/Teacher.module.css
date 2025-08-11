@@ -1,3 +1,7 @@
+.container {
+    background: #f8f8f8;
+  padding-left: 128px;
+}
 svg {
     width: 16px;
     height: 16px;
@@ -6,11 +10,15 @@ svg {
 .teacherCard {
     display: flex;
     gap: 48px;
+        margin-bottom: 32px;
+        width: 1184px;
+        background: #fff;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .headerList {
@@ -60,4 +68,103 @@ color: #8a8a89;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
+}
+
+.teacherName {
+font-weight: 500;
+font-size: 24px;
+line-height: 1;
+margin-bottom: 32px;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.text {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: #8a8a89;
+}
+
+.teacherInfo {
+color: #121417;
+}
+
+.underline {
+    text-decoration: underline;
+text-decoration-skip-ink: none;
+}
+
+.more {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+margin-bottom: 32px;
+}
+
+.experience {
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 32px;
+}
+
+.revContainer {
+display: flex;
+gap: 12px;
+margin-bottom: 16px;
+}
+
+.reviewerName {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: #8a8a89;
+}
+
+.coment {
+
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 32px;
+}
+
+.levels {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.btnLevel {
+     border: 1px solid rgba(18, 20, 23, 0.2);
+border-radius: 35px;
+background-color: #fff;
+width: 124px;
+height: 32px;
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+}
+
+.btnLevel:hover {
+    background: #f4c550;
+}
+
+.book {
+    border-radius: 12px;
+
+width: 232px;
+height: 60px;
+background: #f4c550;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.56;
 }

@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 32px;
+    background: #f8f8f8;
+       padding-top: 96px;
+       padding-left: 128px;
+}
+
+.label {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.29;
+color: #8a8a89;
+margin-bottom: 8px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.select {
+    border-radius: 14px;
+padding: 14px 0 14px 18px;
+width: 221px;
+height: 48px;
+font-weight: 500;
+font-size: 18px;
+line-height: 1.11;
+
+}
