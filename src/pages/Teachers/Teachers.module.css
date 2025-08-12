@@ -6,6 +6,10 @@ background-color: #F4C550 !important;
 background-color: #F4C550 !important;
 }
 
+.btnYellow:hover {
+    background-color: #fbe9ba !important;
+}
+
 .borderYellow {
     border:  1.50px dashed #F4C550 !important;
 }
@@ -18,6 +22,11 @@ background-color: #9FBAAE !important;
     background-color: #9FBAAE !important;
 }
 
+.btnGreen:hover {
+    background-color: #cbded3 !important;
+}
+
+
 .borderGreen {
     border:  1.50px dashed #9FBAAE !important;
 }
@@ -28,6 +37,10 @@ background-color: #9FB7CE !important;
 
 .btnBlue {
     background-color: #9FB7CE !important;
+}
+
+.btnBlue:hover {
+    background-color:#bfd6ea !important;
 }
 
 .borderBlue {
@@ -42,6 +55,10 @@ background-color: #9FB7CE !important;
     background-color: #E0A39A !important;
 }
 
+.btnRed:hover {
+    background-color: #f2c0bd !important;
+}
+
 .borderRed {
     border:  1.50px dashed #E0A39A !important;
 }
@@ -52,6 +69,10 @@ background-color: #F0AA8D !important;
 
 .btnOrange {
     background-color: #F0AA8D !important;
+}
+
+.btnOrange:hover {
+    background-color: #f4c8ba !important;
 }
 
 .borderOrange {

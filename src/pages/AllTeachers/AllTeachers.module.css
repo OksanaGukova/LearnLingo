@@ -30,3 +30,25 @@ font-size: 18px;
 line-height: 1.11;
 
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Optional: Add some space above the button */
+}
+
+.loadMoreBtn {
+    border-radius: 12px;
+
+width: 183px;
+height: 60px;
+background: #f4c550;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.56;
+margin: 0 auto;
+}
+
+button:hover {
+    background-color: #ffdc86;
+}
