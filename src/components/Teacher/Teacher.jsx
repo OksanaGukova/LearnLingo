@@ -218,7 +218,7 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
 
        {modalOpen && (
         <BookModal
-          teacher={setSelectedTeacher}
+          teacher={selectedTeacher}
           onClose={handleCloseModal}
           onSubmit={(formData) => {
             console.log('Form submitted:', {

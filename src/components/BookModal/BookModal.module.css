@@ -1,0 +1,39 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* напівпрозорий чорний фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* вище за все інше */
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 64px;
+  border-radius: 30px;
+width: 599px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+   position: relative; 
+}
+
+img {
+    border-radius: 100px;
+width: 44px;
+height: 44px;
+}
+
+.closeBtn {
+ position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  background: transparent; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 24px; 
+}
