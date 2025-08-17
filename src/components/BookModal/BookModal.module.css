@@ -37,3 +37,79 @@ height: 44px;
   cursor: pointer; 
   font-size: 24px; 
 }
+
+.bookHeader {
+font-weight: 500;
+font-size: 40px;
+line-height: 1.2;
+letter-spacing: -0.02em;
+margin-bottom: 20px;
+}
+
+.bookText {
+font-weight: 400;
+font-size: 16px;
+line-height: 137%;
+color: rgba(18, 20, 23, 0.8);
+margin-bottom: 20px;
+}
+
+.teaherContainer {
+  display: flex;
+ gap: 14px;
+ margin-bottom: 40px;
+}
+
+.teacherText {
+font-weight: 500;
+font-size: 12px;
+line-height: 1.33;
+color: #8a8a89;
+}
+
+.teacher {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+}
+
+.reasons {
+font-weight: 500;
+font-size: 24px;
+line-height: 1.33;
+margin-bottom: 20px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+}
+
+.registerInput {
+  border: 1px solid rgba(18, 20, 23, 0.1);
+border-radius: 12px;
+padding: 16px 0 16px 18px;
+width: 472px;
+height: 54px;
+
+}
+
+.bookButton {
+  border-radius: 12px;
+background: #f4c550;
+width: 472px;
+height: 60px;
+margin-top: 40px;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.56;
+}

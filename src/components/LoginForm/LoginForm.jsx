@@ -3,24 +3,24 @@ import css from './Loginform.module.css'
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../redux/auth/operations';
 
-export default function LoginForm ({onClose}) {
+export default function LoginForm ({ onClose = () => {} }) {
       const dispatch = useDispatch();
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    dispatch(loginUser(values))
+    const handleSubmit = (values, { setSubmitting }) => {
+    return dispatch(loginUser(values))  // ПОВЕРТАЄМО проміс
       .unwrap()
       .then(() => {
         console.log("login success");
-         onClose();
+        onClose();
       })
-      
-      .catch(() => {
-        console.log("login error");
+      .catch((err) => {
+        console.log("login error", err);
       })
       .finally(() => {
         setSubmitting(false);
       });
   };
+
     return (
         <div>
              <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>

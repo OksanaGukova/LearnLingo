@@ -53,10 +53,9 @@ export default function Header ({
         </div>
       </div>
       {isLoginOpen && (
-        <Modal onClose={() => setLoginOpen(false)}>
-          
-          <LoginForm />
-        </Modal>
+       <Modal onClose={() => setLoginOpen(false)}>
+    <LoginForm onClose={() => setLoginOpen(false)} /> {/* 🔥 ось тут */}
+  </Modal>
       )}
       {isRegisterOpen && (
         <Modal onClose={() => setRegisterOpen(false)}>
