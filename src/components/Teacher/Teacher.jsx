@@ -3,7 +3,7 @@ import css from './Teacher.module.css';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import BookModal from '../BookModal/BookModal'
-import sprite from '../../../public/svg/icons.svg'
+import sprite from '/svg/icons.svg'
 
 
 export default function Teacher({ teachers }) {
