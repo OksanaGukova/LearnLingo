@@ -7,6 +7,7 @@ import Modal from '../Modal/Modal';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import Favorite from '../../pages/Favorites/Favorites';
+import sprite from '../../../public/svg/icons.svg'
 
 
 
@@ -24,7 +25,7 @@ export default function Header ({
               <div className={css.header}>
                    <div className={css.learn}>
                          <svg>
-                       <use href={`/svg/icons.svg#${loginUkraine}`}></use>
+                       <use href={`${sprite}#${loginUkraine}`}></use>
                     </svg>
                         <p className={css.learnLingo}>LearnLingo</p>
                    </div>
@@ -38,7 +39,7 @@ export default function Header ({
                         <>
                             <div className={css.loginBox} onClick={() => setLoginOpen(true)}>
                                 <svg className={css.iconLogin}>
-                                    <use href={`/svg/icons.svg#${loginIcon}`}></use>
+                                    <use href={`${sprite}#${loginIcon}`}></use>
                                 </svg>
                                 <p className={css.loginText}>Log in</p>
                             </div>

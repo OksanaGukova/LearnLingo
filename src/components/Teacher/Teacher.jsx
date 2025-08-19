@@ -3,6 +3,7 @@ import css from './Teacher.module.css';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import BookModal from '../BookModal/BookModal'
+import sprite from '../../../public/svg/icons.svg'
 
 
 export default function Teacher({ teachers }) {
@@ -90,7 +91,7 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
               <ul className={css.headerList}>
                 <li className={`${css.headerListItem} ${css.svgItem}`}>
                   <svg>
-                    <use href='./svg/icons.svg#icon-book-open-01'></use>
+                    <use href={`${sprite}#icon-book-open-01`}></use>
                   </svg>
                   <p className={css.headerText}>Lessons online</p>
                 </li>
@@ -101,7 +102,7 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
                 </li>
                 <li className={`${css.headerListItem} ${css.svgItem}`}>
                   <svg className={css.iconLogin}>
-                    <use href='./svg/icons.svg#icon-star'></use>
+                    <use href={`${sprite}#icon-star`}r></use>
                   </svg>
                   <p className={css.headerText}>Rating: {teacher.rating}</p>
                 </li>
@@ -121,7 +122,7 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
     cursor: 'pointer',
   }}
 >
-  <use href='./svg/icons.svg#icon-heart'></use>
+  <use href={`${sprite}#icon-heart`}></use>
 </svg>
             </div>
 

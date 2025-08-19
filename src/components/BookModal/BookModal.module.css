@@ -22,7 +22,7 @@ width: 599px;
    position: relative; 
 }
 
-img {
+.avatarImg {
     border-radius: 100px;
 width: 44px;
 height: 44px;
