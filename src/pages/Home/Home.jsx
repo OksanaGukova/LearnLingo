@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <div>        
             <Header/>
-               <CardText img={'../../../public/img/image-min.png'}/>
+               <CardText img={'img/image-min.png'}/>
               <Statistic/>
                 </div>
 

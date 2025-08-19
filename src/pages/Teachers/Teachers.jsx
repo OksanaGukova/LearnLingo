@@ -1,10 +1,10 @@
 import css from './Teachers.module.css'
 
-import img1 from "../../../public/img/yellow-min.png";
-import img2 from "../../../public/img/grey-min.png";
-import img3 from "../../../public/img/blye-min.png";
-import img4 from "../../../public/img/red-min.png";
-import img5 from "../../../public/img/orange-min.png";
+import img1 from "/img/yellow-min.png";
+import img2 from "/img/grey-min.png";
+import img3 from "/img/blye-min.png";
+import img4 from "/img/red-min.png";
+import img5 from "/img/orange-min.png";
 import TeacherCard from '../../components/TeacherCard/TeacherCard';
 
 export default function Teachers () {
