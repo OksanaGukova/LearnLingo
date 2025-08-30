@@ -6,7 +6,6 @@ import RegistrationForm from '../RegistrationForm/RegistrationForm';
 import Modal from '../Modal/Modal';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
-import Favorite from '../../pages/Favorites/Favorites';
 import sprite from '/svg/icons.svg'
 
 
