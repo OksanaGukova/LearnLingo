@@ -7,7 +7,7 @@ import Modal from '../Modal/Modal';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import Favorite from '../../pages/Favorites/Favorites';
-import sprite from '../../../public/svg/icons.svg'
+import sprite from '/svg/icons.svg'
 
 
 
@@ -53,16 +53,16 @@ export default function Header ({
                     )}
         </div>
       </div>
-      {isLoginOpen && (
-       <Modal onClose={() => setLoginOpen(false)}>
-    <LoginForm onClose={() => setLoginOpen(false)} /> {/* 🔥 ось тут */}
+    {isLoginOpen && (
+  <Modal onClose={() => setLoginOpen(false)}>
+    <LoginForm onClose={() => setLoginOpen(false)} />
   </Modal>
-      )}
-      {isRegisterOpen && (
-        <Modal onClose={() => setRegisterOpen(false)}>
-          <RegistrationForm />
-        </Modal>
-      )}
+)}
+{isRegisterOpen && (
+  <Modal onClose={() => setRegisterOpen(false)}>
+    <RegistrationForm onClose={() => setRegisterOpen(false)} />
+  </Modal>
+)}
     </div>
   );
 

@@ -7,8 +7,9 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   tel: Yup.string()
-    .min(8, "Phone number must be at least 8 characters")
-    .required("Phone number is required"),
+  .matches(/^[0-9+\-()\s]+$/, "Invalid phone number")
+  .min(8, "Phone number must be at least 8 characters")
+  .required("Phone number is required"),
 });
 
 export default function BookModal({ teacher, onClose, onSubmit }) {

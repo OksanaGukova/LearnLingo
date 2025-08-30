@@ -24,10 +24,6 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
   }, []);
 
   // Завантажуємо з localStorage список обраних при старті
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    setFavorites(storedFavorites);
-  }, []);
 
   const toggleHiddenInfo = (index) => {
     setHiddenInfo((prev) => ({
@@ -102,7 +98,7 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
                 </li>
                 <li className={`${css.headerListItem} ${css.svgItem}`}>
                   <svg className={css.iconLogin}>
-                    <use href={`${sprite}#icon-star`}r></use>
+                    <use href={`${sprite}#icon-star`}></use>
                   </svg>
                   <p className={css.headerText}>Rating: {teacher.rating}</p>
                 </li>
@@ -167,7 +163,7 @@ const [selectedTeacher, setSelectedTeacher] = useState(null);
                       <div key={reviewIndex} className={css.review}>
                         <div className={css.revContainer}>
                           <img
-                            src={`../../../public/img/${
+                            src={`/img/${
                               reviewIndex % 2 === 0 ? 'woman' : 'man'
                             }.png`}
                             alt={review.reviewer_name}
